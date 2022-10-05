@@ -5,7 +5,7 @@ data/
 node_modules/
 public/css/
 public/js/
-
+package-lock.json
 
 #############
 ## Windows detritus

@@ -1,0 +1,104 @@
+{% extends "layout.njk" %}
+{% block body %}
+
+	{# Error view #}
+	{% include "error-view.njk" %}
+
+	{# Password view #}
+	<div id="login" class="view hidden">
+		<h1>{{ title }}</h1>
+		<form class="action login-form" action="#">
+			<p class="login-instr instr">Contraseña requerida</p>
+			<div class="login-field-wrap">
+				<input class="login-field field" type="password">
+				<button class="login-btn btn" type="submit" title="Go">&raquo;</button>
+			</div>
+		</form>
+	</div>
+
+	{# Ring List view (ring selection) #}
+	{% include "ring-list-view.njk" %}
+
+	{# Ring view #}
+	<div id="ring" class="view hidden">
+		{# Sidebar (Corner Judges management) #}
+		<div id="judges-sidebar">
+			<h2 class="js-heading"></h2>
+			<ul class="js-list list-reset"></ul>
+			<div class="js-btns">
+				<button type="button" class="js-add btn btn--minor" title="Add slot">+</button>
+				<button type="button" class="js-remove btn btn--minor" title="Remove slot">&minus;</button>
+			</div>
+		</div>
+		{# Match dashboard #}
+		<div class="main">
+			{# Configuration panel #}
+			<div id="config-panel" class="panel">
+				<h2 class="rv-top">Configuracion del Combate</h2>
+				<div class="rv-row">
+					<div class="config">
+						<div class="cf-inner"></div>
+					</div>
+					<div class="cf-new clearfix">
+						<button type="button" class="match-btn match-btn--new btn btn--major">Nuevo Combate</button>
+					</div>
+				</div>
+			</div>
+			{# Match panel #}
+			<div id="match-panel" class="panel hidden">
+				<h2 class="rv-top"></h2>
+				<div class="rv-row rv-row--top">
+					{# Time keeping #}
+					<div class="time-keeping tk_off rv-cell">
+						<div class="tk-inner">
+							<div id="round-timer" class="tk-timer tk-timer--round">
+								<span class="tk-timer-min"></span><span class="tk-timer-sep">:</span><span class="tk-timer-sec"></span>
+							</div>
+							<div id="injury-timer" class="tk-timer tk-timer--injury">
+								<span class="tk-timer-min"></span><span class="tk-timer-sep">:</span><span class="tk-timer-sec"></span>
+							</div>
+						</div>
+					</div>
+					{# Match state management #}
+					<div class="state rv-cell">
+						<div class="st-inner btns-wrap clearfix"></div>
+					</div>
+				</div>
+				<div class="rv-row rv-row--bottom">
+					{# Scoreboards #}
+					<div class="scoreboards rv-cell">
+						<div class="sc-inner"></div>
+					</div>
+					{# Penalties #}
+					<div class="penalties rv-cell"></div>
+				</div>
+			</div>
+			{# Result panel #}
+			<div id="result-panel" class="panel hidden">
+				<h2 class="rv-top">Resultado</h2>
+				<div class="rv-row rv-row--top">
+					<div class="rv-cell">
+						<p class="rp-winner"></p>
+					</div>
+					<div class="rv-cell">
+						<div id="rp-buttons--continue" class="btns-wrap clearfix">
+							<button type="button" class="match-btn match-btn--continue btn btn--major">Continuar</button>
+							<button type="button" class="match-btn match-btn--endm btn btn--minor">Fin del Combate</button>
+						</div>
+						<div id="rp-buttons--end" class="btns-wrap clearfix">
+							<button type="button" class="match-btn match-btn--new btn btn--major">Nuevo Combate</button>
+							<button type="button" class="match-btn match-btn--config btn btn--minor">Cambiar Configuracion</button>
+						</div>
+					</div>
+				</div>
+				<div class="rv-row rv-row--bottom">
+					<div class="rp-results"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{# Backdrop #}
+	{% include "backdrop.njk" %}
+
+{% endblock %}
