@@ -94,11 +94,11 @@ JuryPresident.prototype.ringOpened = function (ring) {
 	assert.provided(ring, 'ring');
 	
 	this._send('io.setPageTitle', {
-		title: "Jury President | Ring " + (ring.index + 1)
+		title: "Jefe de Mesa | Area " + (ring.index + 1)
 	});
 	
 	this.matchConfigUpdated(ring.matchConfig);
-	this._send('judgesSidebar.setHeading', { text: "Ring " + (ring.index + 1) });
+	this._send('judgesSidebar.setHeading', { text: "Area " + (ring.index + 1) });
 	this._send('judgesSidebar.updateSlotList', {
 		slotCount: ring.slotCount,
 		cornerJudges: ring.getCJStates()

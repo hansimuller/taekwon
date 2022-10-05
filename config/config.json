@@ -1,28 +1,28 @@
 {
-	"ringCount": 2,
+	"ringCount": 4,
 	"cjsPerRing": 4,
-	"maxScore": 3,
-	"jpPwd": "tkd",
+	"maxScore": 5,
+	"jpPwd": "uatt",
 	"matchConfig": {
 		"timeStep": 15,
 		"defaults": {
 			"roundTime": {
-				"label": "Round time",
+				"label": "Tiempo del round",
 				"type": "time",
-				"value": 120
+				"value": 90
 			},
 			"breakTime": {
-				"label": "Break time",
+				"label": "Tiempo de descanso",
 				"type": "time",
 				"value": 60
 			},
 			"injuryTime": {
-				"label": "Injury time",
+				"label": "Tiempo por lesion",
 				"type": "time",
 				"value": 120
 			},
 			"twoRounds": {
-				"label": "Number of rounds",
+				"label": "Cantidad de rounds",
 				"type": "boolean",
 				"value": true
 			}

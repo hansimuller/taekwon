@@ -14,8 +14,8 @@ var MatchStates = {
 	
 	ROUND_1: 'Round 1',
 	ROUND_2: 'Round 2',
-	TIE_BREAKER: 'Tie Breaker',
-	GOLDEN_POINT: 'Golden Point',
+	TIE_BREAKER: 'Desempate',
+	GOLDEN_POINT: 'Punto Gana',
 	
 	/**
 	 * Is main round?

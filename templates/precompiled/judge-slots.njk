@@ -5,16 +5,16 @@
 		<h3 class="js-judge-name">{{ cj.name }}</h3>
 		<button type="button" class="js-judge-remove" title="Remove" data-id="{{ cj.id }}">&times;</button>
 		{% if cj.authorised %}
-			<span class="js-judge-state">{% if cj.connected %}Connected{% else %}Connection lost. Waiting for reconnection...{% endif %}</span>
+			<span class="js-judge-state">{% if cj.connected %}Conectado{% else %}Conexion perdida. Esperando reconexion...{% endif %}</span>
 		{% else %}
 			<div class="js-judge-btns">
-				<button type="button" class="js-judge-accept js-judge-btn btn btn--major" data-id="{{ cj.id }}">Accept</button>
-				<button type="button" class="js-judge-reject js-judge-btn btn btn--minor" data-id="{{ cj.id }}">Reject</button>
+				<button type="button" class="js-judge-accept js-judge-btn btn btn--major" data-id="{{ cj.id }}">Aceptar</button>
+				<button type="button" class="js-judge-reject js-judge-btn btn btn--minor" data-id="{{ cj.id }}">Rechazar</button>
 			</div>
 		{% endif %}
 	{% else %}
-		<h3 class="js-judge-name">Judge #{{ i + 1 }}</h3>
-		<span class="js-judge-state">Waiting for connection</span>
+		<h3 class="js-judge-name">Juez #{{ i + 1 }}</h3>
+		<span class="js-judge-state">Esperando conexion</span>
 	{% endif %}
 	</li>
 {% endfor %}

@@ -55,8 +55,8 @@
 .score-btns[data-max="4"] > .score-btn--3 { height: 17%; top: 4%; }
 .score-btns[data-max="4"] > .score-btn--4 { height: 17%; top: 2%; }
 
-.score-btns[data-max="5"] > .score-btn--1 { height: 23%; top: 10%; }
-.score-btns[data-max="5"] > .score-btn--2 { height: 23%; top: 8%; }
+.score-btns[data-max="5"] > .score-btn--1 { height: 25%; top: 10%; }
+.score-btns[data-max="5"] > .score-btn--2 { height: 21%; top: 8%; }
 .score-btns[data-max="5"] > .score-btn--3 { height: 16%; top: 6%; }
 .score-btns[data-max="5"] > .score-btn--4 { height: 10%; top: 4%; }
 .score-btns[data-max="5"] > .score-btn--5 { height: 10%; top: 2%; }

@@ -145,7 +145,7 @@ CornerJudge.prototype.ringJoined = function (ring) {
 	this.authorised = true;
 	this.undoEnabled = false;
 
-	this._send('io.setPageTitle', { title: "Corner Judge | Ring " + (ring.index + 1) });
+	this._send('io.setPageTitle', { title: "Juez de Esquina | Area " + (ring.index + 1) });
 	this._updateBackdrop(ring);
 	this._send('roundView.enableUndoBtn', { enable: false });
 	this._send('root.showView', { view: 'roundView' });
@@ -164,7 +164,7 @@ CornerJudge.prototype.ringLeft = function (message) {
 	this.authorised = false;
 
 	this._send('io.hideBackdrop');
-	this._send('io.setPageTitle', { title: "Corner Judge" });
+	this._send('io.setPageTitle', { title: "Juez de Esquina" });
 	this._send('ringListView.setInstr', { text: message });
 	this._send('root.showView', { view: 'ringListView' });
 
@@ -269,35 +269,35 @@ CornerJudge.prototype._updateBackdrop = function (ring) {
 	
 	if (!ring.juryPresident.connected) {
 		visible = true;
-		text = "Jury President disconnected";
-		subtext = "Waiting for reconnection...";
+		text = "El Jefe de Mesa se ha Desconectado";
+		subtext = "Esperando reconexion...";
 	} else {
 		visible = true;
 		
 		if (!ring.match || ring.match.state.current === MatchStates.MATCH_ENDED) {
-			text = "Hi there!";
-			subtext = "Next match will begin shortly...";
+			text = "Hola!";
+			subtext = "El proximo combate iniciara dentro de poco...";
 		} else {
 			switch (ring.match.state.current) {
 				case MatchStates.ROUND_STARTED:
 					visible = false;
 					break;
 				case MatchStates.ROUND_IDLE:
-					text = "Get ready!";
-					subtext = "Round is about to begin...";
+					text = "Preparado!";
+					subtext = "El Round esta por comenzar...";
 					break;
 				case MatchStates.BREAK_IDLE:
 				case MatchStates.BREAK_STARTED:
-					text = "Break in progress";
-					subtext = "Next round will begin shortly...";
+					text = "Descanso en proceso";
+					subtext = "El proximo Round iniciara dentro de poco...";
 					break;
 				case MatchStates.INJURY:
-					text = "Timeout in progress";
-					subtext = "Match will resume shortly...";
+					text = "Pausa por lesion";
+					subtext = "El combate se reanudara pronto...";
 					break;
 				case MatchStates.RESULTS:
-					text = "Match over";
-					subtext = "Thank you for scoring!";
+					text = "Fin del Combate";
+					subtext = "Gracias por el puntaje!";
 					break;
 			}
 		}
@@ -311,3 +311,4 @@ CornerJudge.prototype._updateBackdrop = function (ring) {
 };
 
 module.exports.CornerJudge = CornerJudge;
+

@@ -6,6 +6,6 @@
  */
 module.exports = {
 	MAIN_ROUNDS: 'Rounds 1 & 2',
-	TIE_BREAKER: 'Tie Breaker',
-	GOLDEN_POINT: 'Golden Point'
+	TIE_BREAKER: 'Desempate',
+	GOLDEN_POINT: 'Punto Gana'
 };

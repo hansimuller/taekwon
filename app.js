@@ -50,18 +50,28 @@ app.get('/', function (req, res) {
 	var identity = 'corner-judge';
 	res.render(identity, {
 		identity: identity,
-		title: "Corner Judge",
+		title: "Juez de Esquina",
 		metaViewport: 'width=device-width, initial-scale=1, user-scalable=no',
 		maxScore: config.maxScore
 	});
 });
 
 // Jury President route
-app.get('/jury', function (req, res) {
+app.get('/mesa', function (req, res) {
 	var identity = 'jury-president';
 	res.render(identity, {
 		identity: identity,
-		title: "Jury President",
+		title: "Jefe de Mesa",
+		metaViewport: 'width=device-width, initial-scale=1'
+	});
+});
+
+// Scoreboard Monitor route
+app.get('/monitor', function (req, res) {
+	var identity = 'scoreboard-monitor';
+	res.render(identity, {
+		identity: identity,
+		title: "Marcador",
 		metaViewport: 'width=device-width, initial-scale=1'
 	});
 });

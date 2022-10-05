@@ -8,7 +8,7 @@
 	<div id="login" class="view hidden">
 		<h1>{{ title }}</h1>
 		<form class="action login-form" action="#">
-			<p class="login-instr instr">Enter your name</p>
+			<p class="login-instr instr">Indique su nombre</p>
 			<div class="login-field-wrap">
 				<input class="login-field field" type="text" autocapitalize="on">
 				<button class="login-btn btn" type="submit" title="Go">&raquo;</button>
@@ -23,14 +23,14 @@
 	<div id="waiting" class="view hidden">
 		<h1>{{ title }}</h1>
 		<div class="action">
-			<p class="instr">Waiting for authorisation...</p>
-			<button class="wa-btn btn btn--minor" type="button">Cancel</button>
+			<p class="instr">Esperando autorizacion de la mesa...</p>
+			<button class="wa-btn btn btn--minor" type="button">Cancelar</button>
 		</div>
 	</div>
 
 	{# Round view (scoring) #}
 	<div id="round" class="view hidden">
-		<button type="button" class="undo-btn btn btn--minor no-hover">Undo</button>
+		<button type="button" class="undo-btn btn btn--minor no-hover">Deshacer</button>
 		<div class="score-btns score-btns--hong" data-max="{{ maxScore }}">
 			{% for val in range(0, maxScore) -%}
 				{% set score = maxScore - val %}
